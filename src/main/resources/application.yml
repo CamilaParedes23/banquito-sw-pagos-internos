@@ -1,0 +1,3 @@
+﻿spring:
+  application:
+    name: banquito-switch-on-us-settlement-service
