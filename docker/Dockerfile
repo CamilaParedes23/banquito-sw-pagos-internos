@@ -9,7 +9,7 @@ COPY src ./src
 # Compilamos el proyecto omitiendo los tests (ya pasaron en el CI.yml)
 RUN mvn clean package -DskipTests
 
-# --- Stage 2: Imagen final ---=====
+# --- Stage 2: Imagen final 
 FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
 
