@@ -1,12 +1,12 @@
-package com.banquito.switchpagos.routing;
+package com.banquito.switchpagos.onussettlement;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SwitchRoutingServiceApplication {
+public class OnUsSettlementServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SwitchRoutingServiceApplication.class, args);
+        SpringApplication.run(OnUsSettlementServiceApplication.class, args);
     }
 }
