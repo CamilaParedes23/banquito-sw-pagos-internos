@@ -24,11 +24,11 @@ jobs:
 
       - name: Build image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/banquito-sw-pagos-internos:latest -f Docker/Dockerfile .
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/banquito-sw-pagos-internos:prod -f Docker/Dockerfile .
 
       - name: Push image
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/banquito-sw-pagos-internos:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/banquito-sw-pagos-internos:prod
 
       - name: Trigger Infra Deploy
         run: |
