@@ -22,7 +22,7 @@ public class CoreBankingClient {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CoreBankingClient.class);
     private static final String DESTINATION_TYPE_ON_US = "ON_US";
-    private static final String ROUTING_CODE_BANQUITO = "BANQUITO";
+    private static final String ROUTING_CODE_BANQUITO = "BQTO001";
 
     private final RestClient coreKongRestClient;
     private final String switchCorePath;
@@ -47,6 +47,11 @@ public class CoreBankingClient {
         validateRequest(request);
         CoreConsumeReservationRequest coreRequest = toCoreConsumeRequest(request);
         String uri = buildConsumeUri(request.getCoreFundingId());
+        LOGGER.info(
+                "Consumo On-Us Core preparado. destinationType={}, routingCode={}, accountingDate={}",
+                coreRequest.getDestinationType(),
+                coreRequest.getRoutingCode(),
+                coreRequest.getAccountingDate());
         try {
             CoreReservationResponse coreResponse = coreKongRestClient.post()
                     .uri(uri)

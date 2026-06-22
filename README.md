@@ -111,7 +111,7 @@ Mapeo del request:
 - `coreFundingId` legacy se usa como `{reservationUuid}` en el path.
 - `lineId` se envia como `paymentLineUuid`.
 - `destinationType` se envia fijo como `ON_US`.
-- `routingCode` se envia fijo como `BANQUITO`.
+- `routingCode` se envia fijo como `BQTO001`, codigo Core/Kong vigente para Banco BanQuito.
 - `destinationAccountNumber` viene del evento.
 - `beneficiaryIdentification` viene del evento.
 - `beneficiaryName` viene del evento.
